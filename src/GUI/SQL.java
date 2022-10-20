@@ -24,9 +24,9 @@ public  Statement sql;
                ResultSet rs;
                String url,userName,userPwd;
                // 连接数据库的语句
-               url="jdbc:sqlserver://localhost:1433;DatabaseName=Hospital";
+               url="jdbc:sqlserver://192.168.1.105:1433;DatabaseName=Hospital";
 
-               userName="sa";
+               userName="admin";
                userPwd="123456";
                con=DriverManager.getConnection(url,userName,userPwd);
                sql=con.createStatement();
