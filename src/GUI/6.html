@@ -15,13 +15,13 @@
     <div class="layui-header">
         <div class="layui-logo layui-hide-xs layui-bg-black">医院信息管理系统</div>
         <!-- 头部区域（可配合layui 已有的水平导航） -->
-        <ul class="layui-nav layui-layout-left">
-            <!-- 移动端显示 -->
+        <ul class="layui-nav layui-layout-left " >
             <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
                 <i class="layui-icon layui-icon-spread-left"></i>
             </li>
 
-            <li class="layui-nav-item layui-hide-xs"><a href="">病人信息</a></li>
+
+            <li class="layui-nav-item layui-hide-xs "><a href="/GUI/patient-show.html"  target="_self">病人信息</a></li>
             <li class="layui-nav-item layui-hide-xs"><a href="">医生信息</a></li>
             <li class="layui-nav-item layui-hide-xs"><a href="">病房信息</a></li>
             <li class="layui-nav-item">
@@ -117,10 +117,13 @@
                 });
             }
         });
-        layui.use(['element', 'table'], function () {
+        /*layui.use(['element', 'table'], function () {
             var { element, table } = layui
+
             table.render({
-                elem: '.tableRender',
+               // elem: '.tableRender',
+                elem: '#layui-nav-item layui-hide-xs  layui-show'
+                ,
                 url: "/source/json/patient.json" //后端传数据的接口
                 ,height: 800 //容器高度
                 ,cols: [[ //表头
@@ -139,11 +142,15 @@
                 page: true
             });
 
-        });
-        //查看导航页面数据
+        });*/
 
 
     });
+
+
+
+
+
 
 </script>
 </body>
