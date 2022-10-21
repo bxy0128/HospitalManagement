@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9ceb2d99-485d-48d8-9852-74d3076caad2" name="变更" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/Login.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/Login.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/html/6.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/html/6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/html/patient-show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/html/patient-show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/json/ward.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/json/ward.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -82,7 +79,7 @@
       <recent name="D:\idea_java_projects\HospitalManagement\source\json" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript 调试.6.html">
+  <component name="RunManager" selected="JavaScript Debug.6.html">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.main" />
       <module name="HospitalManagement" />
@@ -110,8 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript 调试.6.html" />
-        <item itemvalue="JavaScript 调试.ward.show.html" />
+        <item itemvalue="JavaScript Debug.6.html" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +137,7 @@
       <workItem from="1666313486632" duration="18355000" />
       <workItem from="1666346075457" duration="154000" />
       <workItem from="1666373374068" duration="2310000" />
+      <workItem from="1666377474658" duration="1777000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1666236702566</created>
@@ -177,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666360049801</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1">
+      <created>1666379215954</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666379215954</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1">
+      <created>1666379467367</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666379467367</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

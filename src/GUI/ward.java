@@ -60,7 +60,7 @@ public class ward {
         String s = new String();
         s = "("+patient_name+","+ward_dept+","+ ward_id+","+ ward_bednum+")" ;
         //在数据库查询中，需要用到(列名1，列名2，列名3...)
-        return s;;
+        return s;
     }
     public String list(){
         String s = new String();
