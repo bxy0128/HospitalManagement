@@ -21,7 +21,7 @@
             </li>
 
 
-            <li class="layui-nav-item layui-hide-xs "><a href="patient-show.html" target="_self">病人信息</a></li>
+            <li class="layui-nav-item layui-hide-xs "id="patient"><a href="javascript:;">病人信息</a></li>
             <li class="layui-nav-item layui-hide-xs"><a href="">医生信息</a></li>
             <li class="layui-nav-item layui-hide-xs"><a href="">病房信息</a></li>
             <li class="layui-nav-item">
@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <div class="layui-body">
+    <div class="layui-body"id="15"style="display: none">
         <!-- 内容主体区域 -->
         <!-- 这里是表格标签 -->
         <table class="layui-table tableRender"></table>
@@ -92,13 +92,15 @@
 </div>
 
 <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
 <script>
+
+
     //JS
+
     layui.use(['element', 'layer', 'util'], function(){
-        var element = layui.element
-            ,layer = layui.layer
-            ,util = layui.util
-            ,$ = layui.$;
+        var element = layui.element,layer = layui.layer,util = layui.util,$ = layui.$;
 
         //头部事件
         util.event('lay-header-event', {
@@ -120,13 +122,16 @@
         layui.use(['element', 'table'], function () {
             var { element, table } = layui
 
-            table.render({
-               elem: '.tableRender'
+           table.render({
+               elem: '.tableRender',
                // elem: '#layui-nav-item layui-hide-xs  layui-show'
-                ,
+
+                id:12,
                 url: "/source/json/patient.json" //后端传数据的接口
-                ,height: 800 //容器高度
-                ,cols: [[ //表头
+                ,height: 700 //容器高度
+                ,cols: [[
+                   //表头
+                    
                     { field: "patient_id", title: 'ID', width: 80, edit:true,sort: true, fixed: 'left' },
                     { field: 'patient_name', title: '病人姓名', edit:true,width: 120 },
                     { field: 'patient_gender', title: '性别', edit:true,width: 120 },
@@ -139,11 +144,22 @@
                     { field: '', title: '操作' },
 
                 ]],
+
                 page: true
             });
 
         });
+        $('#patient').click(function (){
+           // window.alert("666");
+            /*var a1;
+            var a1 = $('#12').render({display: 'none'});	*/	//通过表格ID获取元素
 
+            var a1 = 	$('#15').show();
+
+
+
+            //设置表格取消隐藏
+        });
 
     });
 
@@ -152,6 +168,9 @@
 
 
 
+
+
 </script>
+
 </body>
 </html>
