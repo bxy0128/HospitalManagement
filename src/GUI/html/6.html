@@ -21,7 +21,7 @@
             </li>
 
 
-            <li class="layui-nav-item layui-hide-xs "><a href="/GUI/patient-show.html"  target="_self">病人信息</a></li>
+            <li class="layui-nav-item layui-hide-xs "><a href="patient-show.html" target="_self">病人信息</a></li>
             <li class="layui-nav-item layui-hide-xs"><a href="">医生信息</a></li>
             <li class="layui-nav-item layui-hide-xs"><a href="">病房信息</a></li>
             <li class="layui-nav-item">
@@ -117,12 +117,12 @@
                 });
             }
         });
-        /*layui.use(['element', 'table'], function () {
+        layui.use(['element', 'table'], function () {
             var { element, table } = layui
 
             table.render({
-               // elem: '.tableRender',
-                elem: '#layui-nav-item layui-hide-xs  layui-show'
+               elem: '.tableRender'
+               // elem: '#layui-nav-item layui-hide-xs  layui-show'
                 ,
                 url: "/source/json/patient.json" //后端传数据的接口
                 ,height: 800 //容器高度
@@ -142,7 +142,7 @@
                 page: true
             });
 
-        });*/
+        });
 
 
     });
