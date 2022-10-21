@@ -48,12 +48,14 @@ public class login {
         String s = new String();
         s = "("+Login_name+","+Password+")";
         return s;
+        //在数据库查询中，需要用到(列名1，列名2，列名3...)
 
     }
     public String list(){
         String s = new String();
         s = "(Login_name,Password)" ;
         return s;
+        //在数据库查询中，需要用到的(值1，值2，值3...)
 
     }
 }

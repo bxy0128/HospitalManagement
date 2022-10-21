@@ -95,6 +95,7 @@ public class SQL {
          * s2代表需要修改的列名
          * s3代表修改之后的数据
          * id代表数据的id
+         * sql1.Update("patient","patient_name","刘二狗",20);//改-测试
          */
         int alter;
         {
@@ -108,6 +109,12 @@ public class SQL {
 
     }
     public  void Insert(String s1,int i,String...values) throws SQLException {//增加
+        /**
+         * s1是表名
+         * i是需要设置的id名
+         * values是需要增加的数值列表，用String[]数组
+         * sql1.Insert("Login",0,"996","11111");//增加-测试
+         */
       int alter;
     switch (s1){
         case "patient":
@@ -121,8 +128,15 @@ public class SQL {
 
     }
     public void delete(String s1,String s2,String s3) throws SQLException {
+        /**
+         * s1是表名
+         * s2是提交的列名
+         * s3是提交的数据
+         * sql1.delete("Login","Login_name","996");//删除-测试
+         */
         int alter;
         alter = sql.executeUpdate("DELETE FROM "+s1+" WHERE "+s2+" = "+s3);
+        System.out.println("删除成功");
     }
 }
 

@@ -1,6 +1,9 @@
 package GUI;
 
 public class patient {
+    /**
+     * 病人的信息_数据库各列名
+     */
     private int patient_id;
     private String patient_name;
     private String patient_gender;
@@ -180,6 +183,7 @@ public class patient {
     public String set(){
         String s = new String();
         s = "("+patient_id+","+patient_name+","+ patient_gender+","+ patient_date_start+","+ patient_dept+","+ patient_state+","+ patient_doc+","+ patient_room+")" ;
+        //在数据库查询中，需要用到(列名1，列名2，列名3...)
 return s;
 
     }
@@ -187,6 +191,7 @@ return s;
         String s = new String();
         s = "(patient_id,patient_name,patient_gender,patient_date_start,patient_dept,patient_state,patient_doc,patient_room)" ;
         return s;
+        //在数据库查询中，需要用到的(值1，值2，值3...)
 
     }
 
