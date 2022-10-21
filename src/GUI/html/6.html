@@ -22,7 +22,7 @@
 
 
             <li class="layui-nav-item layui-hide-xs "id="patient"><a href="javascript:;">病人信息</a></li>
-            <li class="layui-nav-item layui-hide-xs"><a href="javascript:;">医生信息</a></li>
+            <li class="layui-nav-item layui-hide-xs" id="doctor"><a href="javascript:;">医生信息</a></li>
             <li class="layui-nav-item layui-hide-xs"id="ward"><a href="javascript:;">病房信息</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">功能</a>
@@ -111,6 +111,15 @@
         $("#patient").click(function(){
 
             $('#15').load('patient-show.html');
+
+        })
+
+    })
+    $(document).ready(function(){
+
+        $("#doctor").click(function(){
+
+            $('#15').load('doctor.show.html');
 
         })
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>病人信息</title>
+  <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css" media="all">
+</head>
+<body>
+
+<table id="demo" lay-filter="test"></table>
+
+<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script>
+  layui.use('table', function(){
+    var table = layui.table;
+
+    //第一个实例
+    table.render({
+      elem: '#demo'
+      ,height: 700
+      ,url: '/source/json/doctor.json' //数据接口
+      ,page: true //开启分页
+      ,cols: [[ //表头
+        { field: "doctor_id", title: 'ID', width: 80, edit:true,sort: true, fixed: 'left' },
+        { field: 'doctor_name', title: '医生姓名', edit:true,width: 120 },
+        { field: 'doctor_gender', title: '性别', edit:true,width: 120 },
+        { field: 'doctor_department', title: '部门',edit:true, width: 120 },
+        { field: 'doctor_professional qualifications ', title: '学历', edit:true,width: 120 },
+        { field: 'doctor_phone', title: '电话' ,edit:true, width: 120},
+
+      ]]
+    });
+
+  });
+</script>
+</body>
+</html>
