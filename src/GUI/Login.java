@@ -86,9 +86,7 @@ class loginFrame extends JFrame implements ActionListener{
             JOptionPane.showMessageDialog(this, "登陆成功！","消息对话框",JOptionPane.WARNING_MESSAGE);
             this.dispose();
             System.out.println("登录成功");
-
-
-
+            new MainWindow();
         }
         else
             JOptionPane.showMessageDialog(this, "账号或者密码错误!","消息对话框",JOptionPane.WARNING_MESSAGE);

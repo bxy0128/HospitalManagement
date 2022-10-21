@@ -16,5 +16,10 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="json-20220924" level="project" />
+    <orderEntry type="library" name="commons-collections-3.2.1" level="project" />
+    <orderEntry type="library" name="commons-dbutils-1.7-javadoc" level="project" />
+    <orderEntry type="library" name="google.code.gson" level="project" />
+    <orderEntry type="library" name="commons-io-2.11.0-javadoc" level="project" />
   </component>
 </module>

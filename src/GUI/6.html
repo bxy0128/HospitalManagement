@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +81,8 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">66666666666</div>
+        <!-- 这里是表格标签 -->
+        <table class="layui-table tableRender"></table>
     </div>
 
     <div class="layui-footer">
@@ -115,8 +117,34 @@
                 });
             }
         });
+        layui.use(['element', 'table'], function () {
+            var { element, table } = layui
+            table.render({
+                elem: '.tableRender',
+                url: "/source/json/patient.json" //后端传数据的接口
+                ,height: 800 //容器高度
+                ,cols: [[ //表头
+                    { field: "patient_id", title: 'ID', width: 80, edit:true,sort: true, fixed: 'left' },
+                    { field: 'patient_name', title: '病人姓名', edit:true,width: 120 },
+                    { field: 'patient_gender', title: '性别', edit:true,width: 120 },
+                    { field: 'patient_date_start', title: '入院日期',edit:true, width: 120 },
+                    { field: 'patient_dept', title: '科室', edit:true,width: 120 },
+                     { field: 'patient_state', title: '籍贯' ,edit:true, width: 120},
+                     { field: 'patient_doc', title: '主治医生' , edit:true,width: 120},
+                     { field: 'patient_room', title: '所住病房' ,edit:true, width:120},
+                    { field: 'patient_bed', title: '所住床位' , edit:true,width: 120},
+                    { field: '', title: '操作' },
+
+                ]],
+                page: true
+            });
+
+        });
+        //查看导航页面数据
+
 
     });
+
 </script>
 </body>
 </html>
