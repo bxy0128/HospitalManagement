@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>病人信息</title>
+  <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css" media="all">
+</head>
+<body>
+
+<table id="demo" lay-filter="test"></table>
+
+<script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script>
+  layui.use('table', function(){
+    var table = layui.table;
+
+    //第一个实例
+    table.render({
+      elem: '#demo'
+      ,height: 312
+      ,url: '/source/json/ward.json' //数据接口
+      ,page: true //开启分页
+      ,cols: [[ //表头
+        { field: "patient_name", title: '病人姓名', width: 80, edit:true,sort: true, fixed: 'left' },
+        { field: 'ward_dept', title: '住院部门', edit:true,width: 120 },
+        { field: 'ward-id', title: '病房号', edit:true,width: 120 },
+        { field: 'ward-bednum', title: '病床号',edit:true, width: 120 },
+        { field: '', title: '操作' },
+
+      ]]
+    });
+
+  });
+</script>
+</body>
+</html>
