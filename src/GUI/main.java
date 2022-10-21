@@ -27,7 +27,9 @@ public class main {
         ToJson.resultSetToJson(r1,"Login");*/
 
         //模拟修改测试
-        sql1.Update("patient","patient_name","刘二狗",20);
+       // sql1.Update("patient","patient_name","刘二狗",20);//改-测试
+       // sql1.Insert("Login",0,"996","11111");//增加-测试
+       // sql1.delete("Login","Login_name","996");//删除-测试
 
 
 

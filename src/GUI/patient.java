@@ -13,6 +13,17 @@ public class patient {
     public patient() {
     }
 
+    public patient(int patient_id, String patient_name, String patient_gender, String patient_date_start, String patient_dept, String patient_state, String patient_doc, String patient_room) {
+        this.patient_id = patient_id;
+        this.patient_name = patient_name;
+        this.patient_gender = patient_gender;
+        this.patient_date_start = patient_date_start;
+        this.patient_dept = patient_dept;
+        this.patient_state = patient_state;
+        this.patient_doc = patient_doc;
+        this.patient_room = patient_room;
+    }
+
     /*public patient(int patient_id, String patient_name, String patient_gender, String patient_date_start, String patient_dept, String patient_state, String patient_doc, String patient_room) {
         this.patient_id = patient_id;
         this.patient_name = patient_name;
@@ -166,4 +177,18 @@ public class patient {
     }
                 ]"";
 }*/
+    public String set(){
+        String s = new String();
+        s = "("+patient_id+","+patient_name+","+ patient_gender+","+ patient_date_start+","+ patient_dept+","+ patient_state+","+ patient_doc+","+ patient_room+")" ;
+return s;
+
+    }
+    public String list(){
+        String s = new String();
+        s = "(patient_id,patient_name,patient_gender,patient_date_start,patient_dept,patient_state,patient_doc,patient_room)" ;
+        return s;
+
+    }
+
+
 }

@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.Color;
 
-public class Login {
+public class Login_ui {
 
     public static void main(String[] args) {
         new loginFrame();

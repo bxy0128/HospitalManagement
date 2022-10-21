@@ -107,21 +107,22 @@ public class SQL {
         }
 
     }
-    public  void Insert(String...name) {//增加
-        /**
-       不定参数增加列
-         */
+    public  void Insert(String s1,int i,String...values) throws SQLException {//增加
+      int alter;
+    switch (s1){
+        case "patient":
+            patient p1 = new patient(i,values[0],values[1],values[2],values[3],values[4],values[5],values[6]);
+           alter = sql.executeUpdate("INSERT into " + s1 + p1.list() + " values " + p1.set());//list已知，set需设置
+        case "Login":
+            login l1 = new login(values[0],values[1] );
+           alter = sql.executeUpdate("INSERT into " + s1 + l1.list() + " values " + l1.set());//list已知，set需设置
+            System.out.println("增加成功");
+    }
+
+    }
+    public void delete(String s1,String s2,String s3) throws SQLException {
         int alter;
-
-        {
-            try {
-                alter = sql.executeUpdate("INSERT into" +name[1]);
-                System.out.println("修改成功");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
+        alter = sql.executeUpdate("DELETE FROM "+s1+" WHERE "+s2+" = "+s3);
     }
 }
 
