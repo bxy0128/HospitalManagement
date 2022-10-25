@@ -75,8 +75,7 @@
         //登陆事件
         $('#loginBtn').click(function () {
             login();
-            //登录名或密码有误
-            //$('#15').load('6.html');
+
         });
 
     });
@@ -129,9 +128,9 @@
     function login() {
         var loginUsername = $('#loginUsername').val();
         var loginPassword = $('#loginPassword').val();
-        var params = {};
-        params.loginUsername = loginUsername;
-        params.loginPassword = loginPassword;
+        // var params = {};
+        // params.loginUsername = loginUsername;
+        // params.loginPassword = loginPassword;
         if (!validateCode('#loginCard', '#loginCode')) {
             //阻断提示
 
