@@ -7,30 +7,77 @@
 </head>
 <body>
 
-<table id="demo" lay-filter="test"></table>
+<table id="demo" lay-filter="test">
 
+
+</table>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+<script  src="/source/js/FileSaver.js"></script>
 <script>
-  layui.use('table', function(){
+  layui.use('table', function() {
     var table = layui.table;
 
     //第一个实例
     table.render({
       elem: '#demo'
-      ,height:700
-      ,url: '/source/json/ward.json' //数据接口
-      ,page: true //开启分页
-      ,cols: [[ //表头
-        { field: "patient_name", title: '病人姓名', width: 80, edit:true,sort: true, fixed: 'left' },
-        { field: 'ward_dept', title: '住院部门', edit:true,width: 120 },
-        { field: 'ward-id', title: '病房号', edit:true,width: 120 },
-        { field: 'ward-bednum', title: '病床号',edit:true, width: 120 },
-        { field: '', title: '操作' },
+
+      , height: 700
+      , url: '/source/json/ward.json' //数据接口
+      , page: true //开启分页
+      , cols: [[ //表头
+        {field: "patient_name", title: '病人姓名', width: 80, edit: true, sort: true, fixed: 'left'},
+        {field: 'ward_dept', title: '住院部门', edit: true, width: 120},
+        {field: 'ward-id', title: '病房号', edit: true, width: 120},
+        {field: 'ward-bednum', title: '病床号', edit: true, width: 120},
+        {field: '', title: '操作'},
 
       ]]
     });
 
+    table.on('edit(test)', function (obj) {
+      var checkStatus = obj.data;
+      var content = JSON.stringify(checkStatus);
+      //修改的数据
+      var input = JSON.parse(content);
+      console.log(content)
+      console.log(input)
+
+        $.ajax({
+          type: "post",
+          url: 'input.json',
+          contentType: "json",
+          async: true, // 使用同步方式
+          // 1 须要使用JSON.stringify 否则格式为 a=2&b=3&now=14...
+          // 2 须要强制类型转换，否则格式为 {"a":"2","b":"3"}
+          data: {
+            patient_name: "蒋睿",
+            ward-bednum: "4",
+            ward-id: "211",
+            ward_dept: "内"},
+          dataType: "json",
+          success: function (data) {//res为相应体,function为回调函数
+            var alertIndex;
+            if (res.ResultCode === 0) {
+              alert("成功！");
+              //window.history.back()
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            layer.alert('操作失败！！！' + XMLHttpRequest.status + "|" + XMLHttpRequest.readyState + "|" + textStatus, { icon: 5 });
+          }
+        });
+
+      // 入口函数
+      //   var xmlhttp = new  XMLHttpRequest();
+      // xmlhttp.open("POST","http://localhost:63342/HospitalManagement/GUI/html/input.json",true);
+      // xmlhttp.setRequestHeader("Content-type","application/json;charset=utf-8");
+      // xmlhttp.send(_data)
+
+
+    });
   });
+  //
 </script>
 </body>
 </html>

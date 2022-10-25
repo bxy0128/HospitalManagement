@@ -36,11 +36,11 @@ public class ToJson {
             array.add(jsonObj);
         }
         System.out.println(array);
-        Vo patient = new Vo();
+        Layui patient = new Layui();
         patient.setCode(0);//固定格式
         patient.setMsg("success");//固定格式
         patient.setCount(100);//数据的总个数
-        patient.setData(array);//查询的List集合
+        patient.setData(com.alibaba.fastjson2.JSONArray.of(array));//查询的List集合
         Gson g = new Gson();
         String s1 = g.toJson(patient);//json文件
         JSONObject jsonObject = JSONObject.fromObject(s1);

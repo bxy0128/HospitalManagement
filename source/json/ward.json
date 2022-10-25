@@ -1,1 +1,3 @@
-{"code":0,"msg":"success","count":100,"data":[{"patient_name":"刘二狗","ward_dept":"口腔科","ward-id":"102","ward-bednum":"1"},{"patient_name":"余詩涵","ward_dept":"神经科","ward-id":"302","ward-bednum":"2"},{"patient_name":"萧宇宁","ward_dept":"呼吸科","ward-id":"203","ward-bednum":"3"},{"patient_name":"蒋睿","ward_dept":"内科","ward-id":"211","ward-bednum":"4"},{"patient_name":"王云熙","ward_dept":"骨科","ward-id":"212","ward-bednum":"5"}]}
+{"code":0,"msg":"success","count":100,"data":
+[{"patient_name":"刘二狗","ward_dept":"口腔科",
+  "ward-id":"102","ward-bednum":"1"},{"patient_name":"余詩涵","ward_dept":"神经科","ward-id":"302","ward-bednum":"2"},{"patient_name":"萧宇宁","ward_dept":"呼吸科","ward-id":"203","ward-bednum":"3"},{"patient_name":"蒋睿","ward_dept":"内科","ward-id":"211","ward-bednum":"4"},{"patient_name":"王云熙","ward_dept":"骨科","ward-id":"212","ward-bednum":"5"}]}

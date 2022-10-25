@@ -1,0 +1,30 @@
+GET http://localhost:8080/a2.html
+
+<> 2022-10-25T141419.404.html
+
+###
+
+GET http://localhost:8080/a2.html
+
+<> 2022-10-25T004702.404.html
+
+###
+
+GET http://localhost:8080/a2.html
+
+<> 2022-10-25T004100.404.html
+
+###
+
+GET http://localhost:8080/a2
+
+<> 2022-10-25T004035.404.html
+
+###
+
+GET http://localhost:8080/a2
+
+<> 2022-10-25T003841.404.html
+
+###
+
